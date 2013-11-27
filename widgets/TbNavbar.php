@@ -120,7 +120,7 @@ class TbNavbar extends CWidget
         }
         $containerContent = ob_get_clean();
         $containerOptions = TbArray::popValue('containerOptions', $this->htmlOptions, array());
-        TbHtml::addCssClass($this->fluid ? 'container-fluid' : 'container', $containerOptions);
+        TbHtml::addCssClass('container', $containerOptions);
         ob_start();
         echo TbHtml::openTag('div', $containerOptions);
         echo $containerContent;
